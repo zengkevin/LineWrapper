@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace LineWrapper
 {
-    class Program
+    public class LineWrapup
     {
-        static void Main(string[] args)
+        public String Wrapup(string lineText, int cutColumn)
         {
-            LineWrapupLoop lineWrapupLoop = new LineWrapupLoop();
-            lineWrapupLoop.Run();
+            return null;
         }
     }
 }

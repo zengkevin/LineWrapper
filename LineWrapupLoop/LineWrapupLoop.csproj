@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39E1714D-AC6F-43F4-B348-26677D96EE19}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{177C96BA-B91A-4B2A-8459-267CD188EA72}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LineWrapper</RootNamespace>
-    <AssemblyName>LineWrapper</AssemblyName>
+    <RootNamespace>LineWrapupLoop</RootNamespace>
+    <AssemblyName>LineWrapupLoop</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,16 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="LineWrapupLoop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LineWrapupLoop\LineWrapupLoop.csproj">
-      <Project>{177c96ba-b91a-4b2a-8459-267cd188ea72}</Project>
-      <Name>LineWrapupLoop</Name>
+    <ProjectReference Include="..\ConsoleInputService\ConsoleInputService.csproj">
+      <Project>{7e4a6690-fc6d-4ffd-9752-7e704612d892}</Project>
+      <Name>ConsoleInputService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LineWrapup\LineWrapup.csproj">
+      <Project>{966fb22a-eef8-497c-baa5-e40b75a48ad6}</Project>
+      <Name>LineWrapup</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
