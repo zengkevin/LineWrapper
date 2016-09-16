@@ -10,12 +10,12 @@ namespace LineWrapper
     {
         public string GetString()
         {
-            throw new NotImplementedException();
+            return Console.ReadLine();
         }
 
         public int GetInt()
         {
-            throw new NotImplementedException();
+            return int.Parse(Console.ReadLine());
         }
     }
 }
